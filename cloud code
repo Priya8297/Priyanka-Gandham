@@ -1,0 +1,1170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Load Balancinig in Cloud</title>
+<meta name="keywords" content="" />
+<meta name="Premium Series" content="" />
+<link href="default.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.jcarousel.pack.js"></script>
+<script type="text/javascript" src="scripts/jquery.jcarousel.setup.js"></script>
+
+<link rev="made" href="mailto:contact@rainforestnet.com">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="generator" content="NoteTab Light 4.9">
+  <meta name="author" content="TengYong Ng">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+ <script language="javascript" type="text/javascript" src="datetimepicker.js">
+
+//Date Time Picker script- by TengYong Ng of http://www.rainforestnet.com
+//Script featured on JavaScript Kit (http://www.javascriptkit.com)
+//For this script, visit http://www.javascriptkit.com 
+
+</script>
+
+<script language="JavaScript">
+function validation()
+{
+var a = document.f.name.value;
+var b = document.f.id.value;
+
+
+if(a=="")
+{
+alert("Enter Admin Name");
+document.f.name.focus();
+return false;
+}
+
+if(b=="")
+{
+alert("Enter Password");
+document.f.id.focus();
+return false;
+}
+
+
+}
+</script>
+
+
+</head>
+<body>
+<table align="center"><tr align="center"><td align="center">
+	<img src="images/titles.png" height="80" width="1000">
+	</td></tr></table>
+
+<!-- start header -->
+<div id="header">
+
+	<div id="logo">
+	
+		<h1></h1>
+		<p>India's No 1 Job site</p>
+		
+	</div>
+	
+	<div id="menu">
+	
+	
+	<ul id="main">
+	       
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+             <li><a href="#"></a></li>
+			 <li><a href="#"></a></li>
+             <li><a href="#"></a></li>
+
+			<li><a href="#"></a></li>
+			<li><a href="index.html">Logout</a></li>
+			
+			
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+             <li><a href="#"></a></li>
+			 <li><a href="#"></a></li>
+		</ul>
+</div>	
+</div>
+<!-- end header -->
+<div id="wrapper">
+	<!-- start page -->
+	<div id="page">
+		<div id="sidebar1" class="sidebar">
+			<ul>
+		    </ul>
+		</div>
+		<div class="post">
+				
+				<div class="entry">
+				
+				
+<form action="adminchk.jsp" method="post" name="f" onsubmit="return validation();">					
+<table width="366" align="center">
+<tr align="center">
+<td width="163" colspan="2" height="51"><font color="#CC3333" size="+3">Admin Login</font></td>
+</tr>
+<tr align="left">
+<td width="163" height="46" class="paragraping">Admin Name</td>
+<td width="191" class="fielditem"><input type="text"  name="name"></td>
+</tr>
+<tr align="left">
+<td width="163" height="51" class="paragraping">Admin Password</td>
+<td width="191" class="fielditem"><input type="password"  name="id"></td>
+</tr>
+<tr align="center">
+<td align="right"><input type="submit" name="B1" class="button" value="SUBMIT"></td><td align="left">
+<input type="reset" name="reset" class="button" value="CLEAR"></td>
+</tr>
+</table>
+</form>					
+					
+				</div>
+			</div>
+		<!-- end content -->
+		
+		<!-- start sidebars -->
+		<div id="sidebar2" class="sidebar">
+			<ul>
+		    </ul>
+		</div>
+		<!-- end sidebars -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end page -->
+</div>
+<div id="footer">
+	<p class="copyright">&copy;&nbsp;&nbsp;CopyRights.</p>
+	<p class="link"><a href="#"></a>&nbsp;&nbsp;</p>
+</div>
+</body>
+</html>
+<%@ page import="java.sql.,databaseconnection." %>
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Load balancinig in cloud</title>
+<meta name="keywords" content="" />
+<meta name="Premium Series" content="" />
+<link href="default.css" rel="stylesheet" type="text/css" media="screen" />
+
+
+<script language="JavaScript">
+
+function reg1()
+{
+var a1 = document.form1.search1.value;
+var b1 = document.form1.place.value;
+//var c1 = document.form1.exp1.value;
+
+if(a1=="")
+{
+alert("Enter Your Name");
+document.form1.search1.focus();
+return false;
+}
+
+
+
+if (document.form1.place.selectedIndex==0)
+{
+alert("Select location");
+document.form1.place.focus();
+return false;
+}
+
+if (document.form1.exp1.selectedIndex==0)
+{
+alert("Enter the Year of Experience");
+document.form1.exp1.focus();
+return false;
+}
+}
+</script>
+
+
+
+
+
+
+<script language="javascript" type="text/javascript" src="datetimepicker.js">
+
+//Date Time Picker script- by TengYong Ng of http://www.rainforestnet.com
+//Script featured on JavaScript Kit (http://www.javascriptkit.com)
+//For this script, visit http://www.javascriptkit.com 
+
+</script>
+
+<script language="JavaScript">
+function reg()
+{
+var a = document.form.name.value;
+var b = document.form.eid.value;
+var c = document.form.pwd.value;
+var d = document.form.conpwd.value;
+var e = document.form.dob.value;
+var f = document.form.address.value;
+var g = document.form.mno.value;
+/*
+var h = document.form.gender.value;
+*/
+if(a=="")
+{
+alert("Enter Your Name");
+document.form.name.focus();
+return false;
+}
+
+var emailfilter=/^\w+[\+\.\w-]@([\w-]+\.)\w+[\w-]*\.([a-z]{2,4}|\d+)$/i
+	var b=emailfilter.test(document.form.eid.value);
+	if(b==false)
+	{
+	alert(" Enter valid Mail ID");
+	document.form.eid.select();
+	return false;
+	}
+
+
+if(c=="")
+{
+alert("Enter the Password ");
+document.form.pwd.focus();
+return false;
+}
+
+if(d=="")
+{
+alert("retype the password");
+document.form.conpwd.focus();
+return false;
+}
+if(d!=c)
+	{
+	alert ("Enter correct password");
+	document.form.conpwd.select();
+	return false;
+	}
+
+if(e=="")
+{
+alert("Enter the Date of Birth");
+document.form.dob.focus();
+return false;
+}
+if (f=="")
+{
+alert("Enter  Address.");
+document.form.address.focus();
+return false;
+}
+
+if (g=="")
+{
+alert("Enter the Mobile No");
+document.form.mno.focus();
+return false;
+}
+if(g.length!=10)
+	{
+	alert ("Enter valid mobile number");
+	document.form.mno.focus();
+	return false;
+	}
+
+if ((form.gender[0].checked == false) && (form.gender[1].checked == false))
+	{
+	alert ( "Please choose your Gender: Male or Female" );
+	return false;
+	}
+
+
+}
+
+
+
+</script>
+</head>
+<body>
+
+<%
+
+String id=(String)session.getAttribute("id1");
+//out.print(id);
+
+%>
+<table align="center"><tr align="center"><td align="center">
+	<img src="images/titles.png" height="80" width="1000">
+	</td></tr></table>
+
+<!-- start header -->
+<div id="header">
+
+	<div id="logo">
+	
+		<h1></h1>
+		<p>India's No 1 Job site</p>
+		
+		
+		
+		
+	</div>
+	
+	<div id="menu">
+		<ul id="main">
+			<li class="current_page_item"><a href="alljobs.jsp">JobSearch</a></li>
+			<li><a href="postresume.jsp">PostResme</a></li>
+			<li><a href="login.jsp">JobSeekerLogin</a></li>
+			<li><a href="learning.jsp">FastForward</a></li>
+			<li><a href="lear.jsp">Learning</a></li>
+		</ul>
+		<ul id="feed">
+			<li><a href="admin.jsp">Admin</a></li>
+			<li><a href="index.html">Logout</a></li>
+		</ul>
+	</div>
+	
+</div>
+<!-- end header -->
+<div id="wrapper">
+	<!-- start page -->
+	<div id="page">
+		<div id="sidebar1" class="sidebar">
+			<ul>
+				<li>
+					<h2>Top Employers</h2>
+					<ul>
+<table>
+<tr>
+<td><a href="comp.jsp?ibm"><img src="images/ibm.jpeg" height="80" width="100"></a></td>
+<td><a href="comp.jsp?capgemini"><img src="images/capgemini.jpeg" height="80" width="100"></a></td> 
+</tr>
+
+<tr>
+<td><a href="comp.jsp?cognizant"><img src="images/cts.jpeg" height="80" width="100"></a></td>
+<td><a href="comp.jsp?hcl"><img src="images/hcl.jpeg" height="80" width="100"></a></td>
+</tr>
+<tr>
+<td><a href="comp.jsp?wipro"><img src="images/wipro.jpeg" height="80" width="100"></a></td><td><a href="comp.jsp?tcs"><img src="images/tcs.jpeg" height="80" width="100"></a></td>
+</tr>
+<tr>
+<td><a href="comp.jsp?hexaware"><img src="images/hexaware.jpeg" height="80" width="100"></a></td><td><a href="comp.jsp?polaris"><img src="images/polaris.jpeg" height="80" width="100"></a></td>
+</tr>
+<tr>
+<td><a href="comp.jsp?igate"><img src="images/igate.jpeg" height="80" width="100"></a></td><td><a href="comp.jsp?satyam"><img src="images/techmahindra (2).jpeg" height="80" width="100"></a></td> </tr>
+<tr>
+<td><a href="comp.jsp?infosys"><img src="images/infosys.jpeg" height="80" width="100"></a></td><td><a href="comp.jsp?techmahindra"><img src="images/techmahindra.gif" height="80" width="100"></a></td></tr>
+</table>
+	
+
+	
+				</ul>
+				</li>
+				<li>
+					<h2>Government Jobs</h2>
+					<ul>
+						<li><a href="comp1.jsp?rail">Railway Jobs</a> </li>
+						<li><a href="comp1.jsp?tnpc">TNPC</a> </li>
+						<li><a href="comp1.jsp?upsc">UPSC</a> </li>
+						<li><a href="comp1.jsp?tet">TET Exams</a> </li>
+						<li><a href="comp1.jsp?navy">Indian Navy</a> </li>
+						<li><a href="comp1.jsp?army">Indian Army</a> </li>
+						<li><a href="comp1.jsp?airforce">Indian Airforce</a> </li>
+					</ul>
+
+				</li>
+				
+				
+				
+			</ul>
+		</div>
+		<!-- start content -->
+		<div id="content">
+		
+		
+		  <form name="form1" action="search1.jsp" method="post" onsubmit="return reg1()">
+		  <table width="550" height="150">
+		  <tr><td colspan="4" blink align="center"><font size="+3" color="#3333FF"><blink>Find Jobs</blink></font></td></tr>
+		  <tr>
+		  <td><input type="text" name="search1" placeholder="Enter Keyword For Search"></td> 
+		  <td><select name="place">
+		  <option value="0">SelectLocation</option>
+		  <option value="chennai">Chennai</option>
+		  <option value="mumbai">Mumbai</option>
+		  <option value="kolkata">Kolkata</option>
+		  <option value="gurgon">Gurgon</option>
+		  <option value="delhi">Delhi</option>
+		  <option value="goa">Goa</option>		  </select></td>
+		  
+		  <td><select name="exp1">
+		  <option value="0">Experience(Yrs)</option>
+		  <option value="fresher">Fresher</option>		  
+		  <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7</option>
+		  <option value="8">8</option>
+		  <option value="9">9</option>
+		  <option value="10">10</option>
+		  <option value="11">11</option>
+		  <option value="12">12</option>
+		  <option value="13">13</option>
+		  <option value="14">14</option>
+		  <option value="15">15</option>
+		  <option value="16">16</option>
+		  <option value="17">17</option>
+		  <option value="18">18</option>
+		  <option value="19">19</option>
+		  <option value="20">>20</option>
+		  </select></td>
+		  <td><input type="submit" value="Search" name="search">
+		  </td>  
+		  </tr>
+          </table>
+		  </form>
+
+		<!--<div class="flower"><img src="images/img06.jpg" alt="" width="510" height="250" /></div>   -->
+			
+			   <div class="post">
+				<h1 class="title"><a href="#">Register Personal details!</a></h1>
+				<p class="byline"><small><a href="#"></a></small></p>
+				<div class="entry">
+				
+				
+
+
+<%
+
+
+//out.print("This is a freshers");
+
+			
+
+try
+{
+Connection conn=databasecon.getconnection();
+PreparedStatement pss=conn.prepareStatement("select rolno,name,role,eligible,qualification,time,dob,dob1,exp1 from company");
+ //and  exp1 like '"+exp1+"' 
+ResultSet rss=pss.executeQuery();
+while (rss.next())
+{
+
+String rolno=rss.getString("rolno");
+//session.setAttribute("comno",rolno);
+String name1=rss.getString("name");
+//out.print(name1);
+String a2=rss.getString("role");
+//out.print(a);
+String b2=rss.getString("eligible");
+//out.print(b);
+String c2=rss.getString("qualification");
+//out.print(c);
+String d2=rss.getString("time");
+//out.print(d);
+String e2=rss.getString("dob");
+//out.print(e);
+String f2=rss.getString("dob1");
+//out.print(f);
+String g2=rss.getString("exp1");
+//out.print(g);
+%>
+
+				
+				
+
+<table>
+
+</table>
+<table align="center"  class="s1" height="100" >
+<tr align="left"><td colspan="2" align="left" height="10"><font color="#0000FF" size="+1">&nbsp;</font></td>
+</tr>
+<tr align="left"><td align="left" height="15"></td></tr>
+<tr align="left"><td align="left"><font color="#FF0000">Company Name</font></td><td>:&nbsp;<font color="#FF0000"><%=name1%></font></td>
+</tr>
+<tr align="left"><td align="left" height="10"></td></tr>
+<tr align="left"><td align="left">Qualification</td><td>:&nbsp;<%=c2%></td></tr>
+<tr align="left"><td align="left" height="10"></td></tr>
+<tr align="left"><td align="left">Experience</td><td>:&nbsp;Freshers</td></tr>
+<tr align="left"><td align="left" height="10"></td></tr>
+<tr align="left"><td align="left">Date From</td><td>:&nbsp;<%=e2%></td></tr>
+<tr align="left"><td align="left" height="10"></td></tr>
+<tr align="left"><td align="left">Last Date</td><td>:&nbsp;<%=f2%></td></tr>
+<tr align="left"><td align="left" height="10"></td></tr>
+<tr align="left"><td align="left">Time</td><td>:&nbsp;<%=d2%></td></tr>
+<tr align="left"><td align="left" height="10"></td></tr>
+<tr align="left"><td align="left">Eligibility</td><td>:&nbsp;<%=b2%></td></tr>
+<tr align="left"><td align="left" height="10"></td></tr>
+<tr align="left"><td align="left" height="10"></td></tr>
+<tr><td class="s1" align="right"></td>
+<td align="right" class="s1"><a href="login.jsp">Login To Apply</a></td></tr>
+
+
+</table>
+
+<%	
+	
+}
+}
+catch(Exception e1)
+{
+out.println(e1.getMessage());
+}
+
+
+
+
+
+
+
+
+%>
+	
+				</div>
+			</div>
+			<div class="post">
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			<div class="post">
+				</div>
+		</div>
+		<!-- end content -->
+		<!-- start sidebars -->
+		<div id="sidebar2" class="sidebar">
+			<ul>
+				<li>
+					<form id="searchform" method="get" action="#">
+						
+					</form>
+				</li>
+				<li>
+					<h2>Job Search by Topcities</h2>
+					<ul>
+						<li><a href="city.jsp?mumbai">Mumbai</a></li> 
+						<li><a href="city.jsp?chennai">Chennai</a> </li>
+						<li><a href="city.jsp?kolkata">Kolkata</a> </li>
+						<li><a href="city.jsp?pune">Pune</a> </li>
+						<li><a href="city.jsp?delhi">Delhi</a></li>
+						<li><a href="city.jsp?gurgon">Gurgon</a> </li>
+						<li><a href="city.jsp?ahmadabadh">Ahmadabadh</a> </li>
+						<li><a href="city.jsp?noida">Noida</a> </li>
+						<li><a href="city.jsp?hydrabad">Hydrabad</a> </li>
+						<li><a href="city.jsp?bangalore">Bangalore</a></li>
+					</ul>
+
+					
+					
+					</li>
+				<li>
+					<h2>Search by Department</h2>
+					<ul>
+						<li><a href="comp1.jsp?it">IT</a> </li>
+						<li><a href="comp1.jsp?bpo">BPO</a> </li>
+						<li><a href="comp1.jsp?mechanical">Mechanical</a> </li>
+						<li><a href="comp1.jsp?electrical">Electrical</a></li>
+						<li><a href="comp1.jsp?electronics">Electronics</a> </li>
+						<li><a href="comp1.jsp?civil">Civil</a> </li>
+						<li><a href="comp1.jsp?management">Management</a> </li>
+						<li><a href="comp1.jsp?bank">Bank Jobs</a> </li>
+					</ul>
+				</li>
+				<li>
+					
+					
+				</li>
+			</ul>
+		</div>
+		<!-- end sidebars -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end page -->
+</div>
+<div id="footer">
+	<p class="copyright">&copy;&nbsp;&nbsp;CopyRights.</p>
+	<p class="link"><a href="#"></a>&nbsp;&nbsp;</p>
+</div>
+</body>
+</html>
+<%@ page import="java.sql.,databaseconnection." %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Load Balancinig in Cloud</title>
+<meta name="keywords" content="" />
+<meta name="Premium Series" content="" />
+<link href="default.css" rel="stylesheet" type="text/css" media="screen" />
+
+<script language="JavaScript"> 
+
+function reg1()
+{
+var a1 = document.form1.search1.value;
+var b1 = document.form1.place.value;
+//var c1 = document.form1.exp1.value;
+
+if(a1=="")
+{
+alert("Enter Your Name");
+document.form1.search1.focus();
+return false;
+}
+
+
+
+if (document.form1.place.selectedIndex==0)
+{
+alert("Select location");
+document.form1.place.focus();
+return false;
+}
+
+if (document.form1.exp1.selectedIndex==0)
+{
+alert("Enter the Year of Experience");
+document.form1.exp1.focus();
+return false;
+}
+}
+</script>
+
+
+
+
+
+<script language="javascript" type="text/javascript" src="datetimepicker.js">
+
+//Date Time Picker script- by TengYong Ng of http://www.rainforestnet.com
+//Script featured on JavaScript Kit (http://www.javascriptkit.com)
+//For this script, visit http://www.javascriptkit.com 
+
+</script>
+
+<script language="JavaScript">
+function reg()
+{
+var a = document.form.name.value;
+var b = document.form.eid.value;
+var c = document.form.pwd.value;
+var d = document.form.conpwd.value;
+var e = document.form.dob.value;
+var f = document.form.address.value;
+var g = document.form.mno.value;
+/*
+var h = document.form.gender.value;
+*/
+if(a=="")
+{
+alert("Enter Your Name");
+document.form.name.focus();
+return false;
+}
+
+var emailfilter=/^\w+[\+\.\w-]@([\w-]+\.)\w+[\w-]*\.([a-z]{2,4}|\d+)$/i
+	var b=emailfilter.test(document.form.eid.value);
+	if(b==false)
+	{
+	alert(" Enter valid Mail ID");
+	document.form.eid.select();
+	return false;
+	}
+
+
+if(c=="")
+{
+alert("Enter the Password ");
+document.form.pwd.focus();
+return false;
+}
+
+if(d=="")
+{
+alert("retype the password");
+document.form.conpwd.focus();
+return false;
+}
+if(d!=c)
+	{
+	alert ("Enter correct password");
+	document.form.conpwd.select();
+	return false;
+	}
+
+if(e=="")
+{
+alert("Enter the Date of Birth");
+document.form.dob.focus();
+return false;
+}
+if (f=="")
+{
+alert("Enter  Address.");
+document.form.address.focus();
+return false;
+}
+
+if (g=="")
+{
+alert("Enter the Mobile No");
+document.form.mno.focus();
+return false;
+}
+if(g.length!=10)
+	{
+	alert ("Enter valid mobile number");
+	document.form.mno.focus();
+	return false;
+	}
+
+if ((form.gender[0].checked == false) && (form.gender[1].checked == false))
+	{
+	alert ( "Please choose your Gender: Male or Female" );
+	return false;
+	}
+
+
+}
+
+
+
+</script>
+</head>
+<body>
+
+<%
+
+String id=(String)session.getAttribute("id1");
+//out.print(id);
+
+%>
+<table align="center"><tr align="center"><td align="center">
+	<img src="images/titles.png" height="80" width="1000">
+	</td></tr></table>
+
+<!-- start header -->
+<div id="header">
+
+	<div id="logo">
+	
+		<h1></h1>
+		<p>India's No 1 Job site</p>
+		
+		
+		
+		
+	</div>
+	
+	<div id="menu">
+		<ul id="main">
+			<li class="current_page_item"><a href="alljobs.jsp">JobSearch</a></li>
+			<li><a href="postresume.jsp">PostResme</a></li>
+			<li><a href="login.jsp">JobSeekerLogin</a></li>
+			<li><a href="learning.jsp">FastForward</a></li>
+			<li><a href="lear.jsp">Learning</a></li>
+		</ul>
+		<ul id="feed">
+			<li><a href="admin.jsp">Admin</a></li>
+			<li><a href="index.html">Logout</a></li>
+		</ul>
+	</div>
+	
+</div>
+<!-- end header -->
+<div id="wrapper">
+	<!-- start page -->
+	<div id="page">
+		<div id="sidebar1" class="sidebar">
+			<ul>
+				<li>
+					<h2>Top Employers</h2>
+					<ul>
+<table>
+<tr>
+<td><a href="comp.jsp?ibm"><img src="images/ibm.jpeg" height="80" width="100"></a></td>
+<td><a href="comp.jsp?capgemini"><img src="images/capgemini.jpeg" height="80" width="100"></a></td> 
+</tr>
+<tr>
+<td><a href="comp.jsp?cognizant"><img src="images/cts.jpeg" height="80" width="100"></a></td>
+<td><a href="comp.jsp?hcl"><img src="images/hcl.jpeg" height="80" width="100"></a></td>
+</tr>
+<tr>
+<td><a href="comp.jsp?wipro"><img src="images/wipro.jpeg" height="80" width="100"></a></td><td><a href="comp.jsp?tcs"><img src="images/tcs.jpeg" height="80" width="100"></a></td>
+</tr>
+<tr>
+<td><a href="comp.jsp?hexaware"><img src="images/hexaware.jpeg" height="80" width="100"></a></td><td><a href="comp.jsp?polaris"><img src="images/polaris.jpeg" height="80" width="100"></a></td>
+</tr>
+<tr>
+<td><a href="comp.jsp?igate"><img src="images/igate.jpeg" height="80" width="100"></a></td><td><a href="comp.jsp?satyam"><img src="images/techmahindra (2).jpeg" height="80" width="100"></a></td> </tr>
+<tr>
+<td><a href="comp.jsp?infosys"><img src="images/infosys.jpeg" height="80" width="100"></a></td><td><a href="comp.jsp?techmahindra"><img src="images/techmahindra.gif" height="80" width="100"></a></td></tr>
+</table>
+	
+
+	
+				</ul>
+				</li>
+				<li>
+					<h2>Government Jobs</h2>
+					<ul>
+						<li><a href="comp1.jsp?rail">Railway Jobs</a> </li>
+						<li><a href="comp1.jsp?tnpc">TNPC</a> </li>
+						<li><a href="comp1.jsp?upsc">UPSC</a> </li>
+						<li><a href="comp1.jsp?tet">TET Exams</a> </li>
+						<li><a href="comp1.jsp?navy">Indian Navy</a> </li>
+						<li><a href="comp1.jsp?army">Indian Army</a> </li>
+						<li><a href="comp1.jsp?airforce">Indian Airforce</a> </li>
+					</ul>
+
+				</li>
+				
+				
+				
+			</ul>
+		</div>
+		<!-- start content -->
+		<div id="content">
+		
+		
+		  <form name="form1" action="search1.jsp" method="post" onsubmit="return reg1()">
+		  <table width="550" height="150">
+		  <tr><td colspan="4" blink align="center"><font size="+3" color="#3333FF"><blink>Find Jobs</blink></font></td></tr>
+		  <tr>
+		  <td><input type="text" name="search1" placeholder="Enter Keyword For Search"></td> 
+		  <td><select name="place">
+		  <option value="0">SelectLocation</option>
+		  <option value="chennai">Chennai</option>
+		  <option value="mumbai">Mumbai</option>
+		  <option value="kolkata">Kolkata</option>
+		  <option value="gurgon">Gurgon</option>
+		  <option value="delhi">Delhi</option>
+		  <option value="goa">Goa</option>		  </select></td>
+		  
+		  <td><select name="exp1">
+		  <option value="0">Experience(Yrs)</option>
+		  <option value="fresher">Fresher</option>		  
+		  <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		  <option value="6">6</option>
+		  <option value="7">7</option>
+		  <option value="8">8</option>
+		  <option value="9">9</option>
+		  <option value="10">10</option>
+		  <option value="11">11</option>
+		  <option value="12">12</option>
+		  <option value="13">13</option>
+		  <option value="14">14</option>
+		  <option value="15">15</option>
+		  <option value="16">16</option>
+		  <option value="17">17</option>
+		  <option value="18">18</option>
+		  <option value="19">19</option>
+		  <option value="20">>20</option>
+		  </select></td>
+		  <td><input type="submit" value="Search" name="search">
+		  </td>  
+		  </tr>
+          </table>
+		  </form>
+
+		<!--<div class="flower"><img src="images/img06.jpg" alt="" width="510" height="250" /></div>   -->
+			
+			   <div class="post">
+				<h1 class="title"><a href="#">Register Personal details!</a></h1>
+				<p class="byline"><small><a href="#"></a></small></p>
+				<div class="entry">
+				
+				<%
+
+try
+{
+Connection con=databasecon.getconnection();
+PreparedStatement ps=con.prepareStatement("select registration.name,registration.mno,registration.uid,seekerdetails.exp,seekerdetails.cname,seekerdetails.desi,seekerdetails.field from registration,seekerdetails where seekerdetails.id='"+id+"' and registration.id='"+id+"'");
+ResultSet rs=ps.executeQuery();
+while (rs.next())
+{
+String name=rs.getString("name");
+//out.print(name);
+String a=rs.getString("mno");
+//out.print(a);
+String b=rs.getString("uid");
+//out.print(b);
+String c=rs.getString("exp");
+//out.print(c);
+String d=rs.getString("cname");
+//out.print(d);
+String e=rs.getString("desi");
+//out.print(e);
+String f=rs.getString("field");
+//out.print(f);
+%>				
+				
+
+
+<%
+
+String fre="fresher";				
+if(fre.equals(c))
+{	
+
+
+
+			
+
+try
+{
+Connection conn=databasecon.getconnection();
+PreparedStatement pss=conn.prepareStatement("select rolno,name,role,eligible,qualification,time,dob,dob1,exp1 from company where role like '"+'%'+f+'%'+ "' and exp1='"+fre+"'");
+ //and  exp1 like '"+exp1+"' 
+ResultSet rss=pss.executeQuery();
+while (rss.next())
+{
+
+String rolno=rss.getString("rolno");
+session.setAttribute("comno",rolno);
+String name1=rss.getString("name");
+//out.print(name1);
+String a2=rss.getString("role");
+//out.print(a);
+String b2=rss.getString("eligible");
+//out.print(b);
+String c2=rss.getString("qualification");
+//out.print(c);
+String d2=rss.getString("time");
+//out.print(d);
+String e2=rss.getString("dob");
+//out.print(e);
+String f2=rss.getString("dob1");
+//out.print(f);
+String g2=rss.getString("exp1");
+//out.print(g);
+%>
+
+				
+				
+
+<table>
+
+</table>
+<table align="center"  class="s1" height="100" >
+<tr align="left"><td colspan="2" align="left" height="10"><font color="#0000FF" size="+1">&nbsp;</font></td>
+</tr>
+<tr align="left"><td align="left" height="15"></td></tr>
+<tr align="left"><td align="left"><font color="#FF0000">Company Name</font></td><td>:&nbsp;<font color="#FF0000"><%=name1%></font></td>
+</tr>
+<tr align="left"><td align="left" height="10"></td></tr>
+<tr align="left"><td align="left">Qualification</td><td>:&nbsp;<%=c2%></td></tr>
+<tr align="left"><td align="left" height="10"></td></tr>
+<tr align="left"><td align="left">Experience</td><td>:&nbsp;Freshers</td></tr>
+<tr align="left"><td align="left" height="10"></td></tr>
+<tr align="left"><td align="left">Date From</td><td>:&nbsp;<%=e2%></td></tr>
+<tr align="left"><td align="left" height="10"></td></tr>
+<tr align="left"><td align="left">Last Date</td><td>:&nbsp;<%=f2%></td></tr>
+<tr align="left"><td align="left" height="10"></td></tr>
+<tr align="left"><td align="left">Time</td><td>:&nbsp;<%=d2%></td></tr>
+<tr align="left"><td align="left" height="10"></td></tr>
+<tr align="left"><td align="left">Eligibility</td><td>:&nbsp;<%=b2%></td></tr>
+<tr align="left"><td align="left" height="10"></td></tr>
+<tr align="left"><td align="left" height="10"></td></tr>
+<tr><td class="s1" align="center"></td>
+<td align="right" class="s1"><font color="#339966">You have Applied succesffully for this JOB</font></td></tr>
+
+
+</table>
+
+<%	
+	
+}
+}
+catch(Exception e1)
+{
+out.println(e1.getMessage());
+}
+
+}
+
+else
+{
+
+
+
+try
+{
+Connection con1=databasecon.getconnection();
+PreparedStatement ps1=con1.prepareStatement("select rolno,name,role,eligible,qualification,time,dob,dob1,exp1 from company where role like '"+'%'+f+'%'+ "' "); //and  exp1 like '"+exp1+"' 
+ResultSet rs1=ps1.executeQuery();
+while (rs1.next())
+{
+String rolno=rs1.getString("rolno");
+//session.setAttribute("comno",rolno);
+String name1=rs1.getString("name");
+//out.print(name);
+String a1=rs1.getString("role");
+//out.print(a);
+String b1=rs1.getString("eligible");
+//out.print(b);
+String c1=rs1.getString("qualification");
+//out.print(c);
+String d1=rs1.getString("time");
+//out.print(d);
+String e1=rs1.getString("dob");
+//out.print(e);
+String f1=rs1.getString("dob1");
+//out.print(f);
+String g1=rs1.getString("exp1");
+//out.print(g);
+%>
+
+				
+				
+
+<table>
+
+</table>
+<table align="center"  class="s1" height="100" >
+<tr align="left"><td colspan="2" align="left" height="10"><font color="#0000FF" size="+1">&nbsp;</font></td>
+</tr>
+<tr align="left"><td align="left" height="15"></td></tr>
+<tr align="left"><td align="left"><font color="#FF0000">Company Name</font></td><td>:&nbsp;<font color="#FF0000"><%=name1%></font></td>
+</tr>
+<tr align="left"><td align="left" height="10"></td></tr>
+<tr align="left"><td align="left">Qualification</td><td>:&nbsp;<%=c1%></td></tr>
+<tr align="left"><td align="left" height="10"></td></tr>
+<tr align="left"><td align="left">Experience</td><td>:&nbsp;<%=g1%></td></tr>
+<tr align="left"><td align="left" height="10"></td></tr>
+<tr align="left"><td align="left">Date From</td><td>:&nbsp;<%=e1%></td></tr>
+<tr align="left"><td align="left" height="10"></td></tr>
+<tr align="left"><td align="left">Last Date</td><td>:&nbsp;<%=f1%></td></tr>
+<tr align="left"><td align="left" height="10"></td></tr>
+<tr align="left"><td align="left">Time</td><td>:&nbsp;<%=d1%></td></tr>
+<tr align="left"><td align="left" height="10"></td></tr>
+<tr align="left"><td align="left">Eligibility</td><td>:&nbsp;<%=b1%></td></tr>
+<tr align="left"><td align="left" height="10"></td></tr>
+<tr align="left"><td align="left" height="10"></td></tr>
+<tr><td class="s1" align="center"></td>
+<td align="center" class="s1"><font color="#339966">You have Applied succesffully for this JOB</font></td></tr>
+
+<tr><td class="s1" align="center"></td>
+<td align="center" class="s1"><font color="#339966"><a href="vacancy.jsp">   <<<<<<<< BACK</a></font></td></tr>
+
+</table>
+
+<%	
+	
+}
+}
+catch(Exception e1)
+{
+out.println(e1.getMessage());
+}
+}
+
+}
+}
+
+catch(Exception e1)
+{
+out.println(e1.getMessage());
+}
+%>
+
+
+
+
+	
+				</div>
+			</div>
+			<div class="post">
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			<div class="post">
+				
+				
+				
+				
+				
+				
+				
+				
+				
+					
+			</div>
+		</div>
+		<!-- end content -->
+		<!-- start sidebars -->
+		<div id="sidebar2" class="sidebar">
+			<ul>
+				<li>
+					<form id="searchform" method="get" action="#">
+						
+					</form>
+				</li>
+				<li>
+					<h2>Job Search by Topcities</h2>
+					<ul>
+						<li><a href="city.jsp?mumbai">Mumbai</a></li> 
+						<li><a href="city.jsp?chennai">Chennai</a> </li>
+						<li><a href="city.jsp?kolkata">Kolkata</a> </li>
+						<li><a href="city.jsp?pune">Pune</a> </li>
+						<li><a href="city.jsp?delhi">Delhi</a></li>
+						<li><a href="city.jsp?gurgon">Gurgon</a> </li>
+						<li><a href="city.jsp?ahmadabadh">Ahmadabadh</a> </li>
+						<li><a href="city.jsp?noida">Noida</a> </li>
+						<li><a href="city.jsp?hydrabad">Hydrabad</a> </li>
+						<li><a href="city.jsp?bangalore">Bangalore</a></li>
+					</ul>
+
+					
+					
+					</li>
+				<li>
+					<h2>Search by Department</h2>
+					<ul>
+						<li><a href="comp1.jsp?it">IT</a> </li>
+						<li><a href="comp1.jsp?bpo">BPO</a> </li>
+						<li><a href="comp1.jsp?mechanical">Mechanical</a> </li>
+						<li><a href="comp1.jsp?electrical">Electrical</a></li>
+						<li><a href="comp1.jsp?electronics">Electronics</a> </li>
+						<li><a href="comp1.jsp?civil">Civil</a> </li>
+						<li><a href="comp1.jsp?management">Management</a> </li>
+						<li><a href="comp1.jsp?bank">Bank Jobs</a> </li>
+					</ul>
+				</li>
+				<li>
+					
+					
+				</li>
+			</ul>
+		</div>
+		<!-- end sidebars -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end page -->
+</div>
+<div id="footer">
+	<p class="copyright">&copy;&nbsp;&nbsp;CopyRights.</p>
+	<p class="link"><a href="#"></a>&nbsp;&nbsp;</p>
+</div>
+</body>
+</html>
